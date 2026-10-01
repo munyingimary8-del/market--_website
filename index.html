@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Molo Opportunities | Jobs, Attachments & Internships</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="nav wrap">
+    <a class="brand" href="#home"><span class="logo">▲</span><span><b>MOLO</b><small>Opportunities</small></span></a>
+    <button class="menu" onclick="toggleMenu()">☰</button>
+    <nav id="navlinks">
+      <a href="#home">Home</a><a href="#jobs">Jobs</a><a href="#attachments">Attachments</a>
+      <a href="#internships">Internships</a><a href="#volunteer">Volunteering</a>
+      <a href="#scholarships">Scholarships</a><a href="#courses">Courses</a>
+    </nav>
+    <div class="actions"><button class="btn outline" onclick="openModal('login')">Login</button><button class="btn" onclick="openModal('register')">Register</button></div>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero">
+ <div class="wrap hero-inner">
+  <div>
+   <span class="pill">Molo • Nakuru • Beyond</span>
+   <h1>Find Jobs, Internships, <span>Attachments & More</span></h1>
+   <p>Molo Opportunities connects students, job seekers and employers. Discover opportunities, build your skills and create a better future.</p>
+   <div class="search">
+    <input id="searchInput" placeholder="What are you looking for?">
+    <select id="category"><option>All Categories</option><option>Jobs</option><option>Attachments</option><option>Internships</option><option>Volunteering</option></select>
+    <select id="location"><option>Molo</option><option>Nakuru</option><option>Other Towns</option></select>
+    <button class="btn" onclick="searchJobs()">Search</button>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="categories wrap">
+ <div class="cat"><div class="icon">💼</div><h3>Jobs</h3><p>Full-time, part-time and contract jobs.</p><a href="#jobs">Browse Jobs →</a></div>
+ <div class="cat"><div class="icon">🎓</div><h3>Attachments</h3><p>Gain hands-on experience and build your career.</p><a href="#attachments">View Attachments →</a></div>
+ <div class="cat"><div class="icon">👩‍💻</div><h3>Internships</h3><p>Learn, grow and gain work experience.</p><a href="#internships">Explore Internships →</a></div>
+ <div class="cat"><div class="icon">❤️</div><h3>Volunteer</h3><p>Make an impact in your community.</p><a href="#volunteer">Find Opportunities →</a></div>
+ <div class="cat"><div class="icon">📚</div><h3>Scholarships & Courses</h3><p>Fund your education and upgrade your skills.</p><a href="#scholarships">View Opportunities →</a></div>
+</section>
+
+<section class="stats"><div class="wrap statgrid"><div><b>10,000+</b><span>Active Users</span></div><div><b>500+</b><span>Opportunity Listings</span></div><div><b>200+</b><span>Employers</span></div><div><b>Molo, Nakuru</b><span>and Beyond</span></div></div></section>
+
+<section id="jobs" class="section wrap">
+ <div class="section-head"><div><span class="eyebrow">OPPORTUNITIES</span><h2>Featured Opportunities</h2></div><button class="textbtn" onclick="showAll()">View All →</button></div>
+ <div id="cards" class="cards"></div>
+</section>
+
+<section id="attachments" class="section alt"><div class="wrap info"><div><span class="eyebrow">STUDENTS</span><h2>Find your attachment placement</h2><p>Search opportunities by course, organization and location. Create a profile and apply directly.</p><button class="btn" onclick="openModal('register')">Create Student Profile</button></div><div class="bigicon">🎓</div></div></section>
+
+<section id="internships" class="section wrap"><div class="info"><div><span class="eyebrow">CAREER START</span><h2>Internships that build experience</h2><p>Discover internship openings from schools, NGOs, businesses and other organizations.</p></div><div class="featurelist"><div>✓ Course-based matching</div><div>✓ Application tracking</div><div>✓ Deadline reminders</div></div></div></section>
+
+<section id="volunteer" class="section alt"><div class="wrap info"><div><span class="eyebrow">COMMUNITY</span><h2>Volunteer and make an impact</h2><p>Find local community, church, NGO and youth opportunities.</p></div><div class="bigicon">🤝</div></div></section>
+
+<section id="scholarships" class="section wrap"><div class="section-head"><div><span class="eyebrow">LEARNING</span><h2>Scholarships & Courses</h2></div></div><div class="cards"><article class="card"><span class="tag purple">Scholarship</span><h3>Student Education Support</h3><p>Education funding opportunities for eligible students.</p><button class="btn small">View Details</button></article><article class="card"><span class="tag green">Course</span><h3>Digital Skills Training</h3><p>Build practical skills for today's workplace.</p><button class="btn small">View Course</button></article></div></section>
+
+<section id="courses" class="section cta"><div class="wrap"><h2>Need a professional CV or application letter?</h2><p>Get help preparing documents for your next opportunity.</p><button class="btn light" onclick="openModal('services')">Explore CV Services</button></div></section>
+</main>
+
+<footer><div class="wrap footergrid"><div><a class="brand lightbrand"><span class="logo">▲</span><span><b>MOLO</b><small>Opportunities</small></span></a><p>Your Future, Our Priority.</p></div><div><h4>Quick Links</h4><a href="#jobs">Jobs</a><a href="#attachments">Attachments</a><a href="#internships">Internships</a><a href="#scholarships">Scholarships</a></div><div><h4>For Employers</h4><a href="#" onclick="openModal('post');return false">Post a Vacancy</a><a href="#">Search Candidates</a><a href="#">Employer Login</a></div><div><h4>Support</h4><a href="#">FAQs</a><a href="#">Contact Us</a><a href="#">Terms & Conditions</a><a href="#">Privacy Policy</a></div></div><div class="copyright">© 2026 Molo Opportunities. All rights reserved.</div></footer>
+
+<div id="modal" class="modal" onclick="closeOutside(event)"><div class="modalbox"><button class="close" onclick="closeModal()">×</button><div id="modalContent"></div></div></div>
+<script src="script.js"></script>
+</body>
+</html>
